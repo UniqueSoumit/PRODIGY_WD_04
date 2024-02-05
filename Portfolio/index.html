@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: blueviolet;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(4, 4, 32);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(167, 167, 177);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #b6b4cf;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+
+            font-size: 2.5rem;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(10, 4, 16);
+        }
+
+        .gray {
+            color: rgb(182, 148, 207);
+        }
+
+        #element {
+            color: rgb(10, 4, 16);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 76vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 33px;
+            position: relative;
+            top: -35px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: white;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .footer-first,
+        .footer-Second,
+        .footer-Third,
+        .footer-Fourth {
+            width: 100%;
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-heading,
+        .footer-subheading {
+            color: #b6b4cf;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #b6b4cf;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.2);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input,
+        .newsletter-form button {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .newsletter-form input {
+            flex-grow: 1;
+            border: 1px solid #b6b4cf;
+            border-radius: 5px;
+        }
+
+        .newsletter-form button {
+            background-color: #3f51b5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #2c387e;
+        }
+
+        .footer-text-center {
+            text-align: center;
+            color: #b6b4cf;
+            padding: 12px 0;
+        }
+
+        .certificates-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .certificates-section h1 {
+            font-size: 2rem;
+            color: white;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .certificate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px;
+            width: 300px;
+        }
+
+        .certificate img {
+            width: 300px;
+            height: 200px;
+            margin-right: 40px;
+            border-radius: 8px;
+        }
+
+        .certificate-details {
+            text-align: left;
+        }
+
+        .certificate-details h2 {
+            font-size: 1.5rem;
+            color: #b6b4cf;
+        }
+
+        .certificate-details p {
+            color: #b6b4cf;
+            margin: 5px 0;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            /* Set background color to white */
+            color: #333;
+            /* Set text color to a darker shade */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            /* Adjust margin-top as needed */
+        }
+
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            /* Set label color */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form button {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #2c387e;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Soumit Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My Name is <span class="purple"> Soumit</span>
+                <div>and I am passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="bg-removebg-preview.png" alt="">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="secondsection">
+            <span class="gray">What I have done so far</span>
+            <h1>Work Experience </h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">HTML Developer (2010 - 2012)</div>
+                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit earum
+                        nostrum impedit voluptate reprehenderit itaque quia quis odio quae eos voluptatum, eveniet nihil
+                        explicabo ea.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="css.png" alt="">
+                    <div class="vertical-title">CSS Developer (2012 - 2014)</div>
+                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit earum
+                        nostrum impedit voluptate reprehenderit itaque quia quis odio quae eos voluptatum, eveniet nihil
+                        explicabo ea.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="js.png" alt="">
+                    <div class="vertical-title">JavaScript Developer (2014 - 2018)</div>
+                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit earum
+                        nostrum impedit voluptate reprehenderit itaque quia quis odio quae eos voluptatum, eveniet nihil
+                        explicabo ea.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="cpp-removebg-preview.png" alt="">
+                    <div class="vertical-title">Learning C++ (2018 - 2020)</div>
+                    <div class="vertical-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit earum
+                        nostrum impedit voluptate reprehenderit itaque quia quis odio quae eos voluptatum, eveniet nihil
+                        explicabo ea.</div>
+                </div>
+        </section>
+
+        <hr>
+
+
+        <section class="certificates-section">
+            <hr>
+            <h1>Certificates</h1>
+
+            <div class="certificate">
+                <img src="Intro_to_Microsoft_excel.png" alt="Certificate 1">
+                <div class="certificate-details">
+                    <h2>Introduction To Microsoft Excel</h2>
+                    <p>Issuing Organization: Coursera</p>
+                    <p>Date of Completion: Aug 5, 2023</p>
+                </div>
+            </div>
+
+            <div class="certificate">
+                <img src="Certificate_Agile.png" alt="Certificate 2">
+                <div class="certificate-details">
+                    <h2>Getting Started with Agile</h2>
+                    <p>Issuing Organization: Infosys</p>
+                    <p>Date of Completion: Dec 1, 2023</p>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <hr>
+
+        <section class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3 class="footer-heading">Soumits Developer Portfolio</h3>
+                <p class="footer-description">Crafting digital experiences with passion and innovation.</p>
+            </div>
+            <div class="footer-Second">
+                <ul class="footer-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-Third">
+                <h4 class="footer-subheading">Connect with Me</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img src="facebook-removebg-preview.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="twitteer-removebg-preview.png" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="linkedin-removebg-preview.png" alt="LinkedIn"></a>
+                    <a href="#" class="social-icon"><img src="github-removebg-preview.png" alt="GitHub"></a>
+                </div>
+            </div>
+            <div class="footer-Fourth">
+                <h4 class="footer-subheading">Newsletter</h4>
+                <p class="footer-description">Stay updated with the latest trends and projects. Subscribe to our
+                    newsletter.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-text-center">Copyright &#169; 2024 www.soumitportfolio.com | All rights reserved</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
